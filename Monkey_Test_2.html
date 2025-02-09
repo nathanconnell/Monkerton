@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Banter Space with Floor Collider</title>
+    <!-- A-Frame core library -->
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- A-Frame Physics System (includes static-body and dynamic-body) -->
+    <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@4.0.1/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene physics="gravity: -9.8">
+      <!-- A sky for context -->
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Floor with a collider -->
+      <a-plane 
+        static-body 
+        rotation="-90 0 0" 
+        width="30" 
+        height="30" 
+        color="#7BC8A4">
+      </a-plane>
+
+      <!-- Your avatar/camera rig (add dynamic-body if you need physics on it) -->
+      <a-entity id="player" 
+                position="0 1.6 5" 
+                camera 
+                wasd-controls 
+                look-controls 
+                dynamic-body>
+        <!-- Optionally add a cursor if needed -->
+        <a-entity cursor="fuse: false; rayOrigin: mouse" 
+                  raycaster="objects: .clickable">
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
