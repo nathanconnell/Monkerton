@@ -14,9 +14,16 @@
         width="30" 
         height="30" 
         color="#7BC8A4">
-      </a-plane>
+      </a-plane> <!--top-->
+      <a-plane 
+        static-body 
+        rotation="90 0 0" 
+        width="30" 
+        height="30" 
+        color="#1B3804">
+      </a-plane> <!--bottom-->
       <a-entity id="player" 
-          position="0 1.6 5" 
+          position="0 1.6 12" 
           camera 
           wasd-controls 
           look-controls 
@@ -28,8 +35,8 @@
       </a-assets>
 
       <!-- Add lighting -->
-      <a-light type="ambient" color="#444"></a-light>
-      <a-light type="directional" color="#FBF" position="1 0 1"></a-light>
+      <a-light type="ambient" color="#22D"></a-light> <!-- ambient light OK -->
+      <a-light type="directional" color="#FBB" position="1 0 1"></a-light> <!-- directional light OK -->
 
       <!-- Load Your Blender Model using asset management -->
       <a-entity 
