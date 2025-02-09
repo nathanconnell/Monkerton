@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Add lighting -->
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" color="#FFF" position="1 1 1"></a-light>
+
+      <!-- Load Your Blender Model -->
+      <a-entity 
+        gltf-model="Monkey/Monkerton.glb" 
+        position="0 0 -3" 
+        scale="1 1 1">
+      </a-entity>
+
+      <!-- User Controls -->
+      <a-camera position="0 1.6 0">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
+
