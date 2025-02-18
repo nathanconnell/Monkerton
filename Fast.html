@@ -10,9 +10,10 @@
     <a-scene stats>
       <a-assets>
         <a-asset-item id="my-model" src="https://nathanconnell.github.io/Monkerton/Monkey/Rock1.glb"></a-asset-item>
+        <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
       </a-assets>
 
-      <a-sky color="#DDDDDD"><a-sky>
+      <a-sky src="#sky-texture"></a-sky>
       <a-light type="directional" color="FFF" position ="3 3 3" intensity="1" castShadow="true"></a-light>
         
       <a-box position="-15 .5 -2" width="10"; height=".3"; depth="10"; color="red; shader: standard" shadow="cast: true; receive: true" sq-collider></a-box>
