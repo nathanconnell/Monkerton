@@ -4,25 +4,55 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@latest/dist/aframe-physics-system.min.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
-
   </head>
   <body>
     <a-scene stats>
+      <!-- Assets -->
       <a-assets>
         <a-asset-item id="my-model" src="https://nathanconnell.github.io/Monkerton/Monkey/Rock1.glb"></a-asset-item>
-        <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
+        <img id="sky-texture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
       </a-assets>
 
+      <!-- Skybox -->
       <a-sky src="#sky-texture"></a-sky>
-      <a-light type="directional" color="FFF" position ="3 3 3" intensity="1" castShadow="true"></a-light>
-        
-      <a-box position="-15 .5 -2" width="10"; height=".3"; depth="10"; color="red; shader: standard" shadow="cast: true; receive: true" sq-collider></a-box>
-      <a-box position="3 1 0"; rotation="0 -100 0"; color="#4CC3D9; shader: standard" shadow="cast: true; receive: true" sq-collider></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow="cast: true; receive: true" dynamic-body></a-sphere>
-        
-      <a-entity geometry="primitive: box; width: 20; height: .1 ; depth: 20" position="0 -0.05 0" material="color: #AA5577; shader: standard" shadow="cast: true; receive: true" sq-collider></a-entity>
-      <a-entity gltf-model="#my-model" position="3 2 5" scale="1 1 1" material="color:brown; shader: standard" shadow="cast: true; receive: true"></a-entity>
+
+      <!-- Lighting -->
+      <a-light type="directional" color="#FFF" position="3 3 3" intensity="1" castShadow="true"></a-light>
+
+      <!-- Red Box -->
+      <a-box position="-15 .5 -2" width="10" height=".3" depth="10" 
+             material="color: red; shader: standard" 
+             shadow="cast: true; receive: true" 
+             sq-collider>
+      </a-box>
+
+      <!-- Blue Box -->
+      <a-box position="3 1 0" rotation="0 -100 0" 
+             material="color: #4CC3D9; shader: standard" 
+             shadow="cast: true; receive: true" 
+             sq-collider>
+      </a-box>
+
+      <!-- Sphere -->
+      <a-sphere position="0 1.25 -5" radius="1.25" 
+                material="color: #EF2D5E" 
+                shadow="cast: true; receive: true" 
+                dynamic-body>
+      </a-sphere>
+
+      <!-- Ground -->
+      <a-entity geometry="primitive: box; width: 20; height: .1; depth: 20" 
+                position="0 -0.05 0" 
+                material="color: #AA5577; shader: standard" 
+                shadow="cast: true; receive: true" 
+                sq-collider>
+      </a-entity>
+
+      <!-- GLTF Model -->
+      <a-entity gltf-model="#my-model" position="3 2 5" scale="1 1 1" 
+                shadow="cast: true; receive: true">
+      </a-entity>
+
     </a-scene>
   </body>
-
 </html>
