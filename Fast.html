@@ -12,14 +12,14 @@
       </a-assets>
 
       <a-sky color="#DDDDDD"><a-sky>
-      <a-light type="directional"; color="FFF"; position ="3 3 3"; light =" "></a-light>
+      <a-light type="directional" color="FFF" position ="3 3 3" intensity="1"></a-light>
         
-      <a-box position="-15 .5 -2" width="10"; height=".3"; depth="10"; color="red"; sq-collider></a-box>
-      <a-box position="3 1 0"; rotation="0 -100 0"; color="#4CC3D9"; sq-collider></a-box>
+      <a-box position="-15 .5 -2" width="10"; height=".3"; depth="10"; color="red; shader: standard" sq-collider></a-box>
+      <a-box position="3 1 0"; rotation="0 -100 0"; color="#4CC3D9; shader: standard" sq-collider></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" dynamic-body></a-sphere>
         
-      <a-entity geometry="primitive: box; width: 20; height: .1 ; depth: 20" position="0 -0.05 0" material="color: #AA5577" sq-collider></a-entity>
-      <a-entity gltf-model="#my-model" position="3 2 5" scale="1 1 1"></a-entity>
+      <a-entity geometry="primitive: box; width: 20; height: .1 ; depth: 20" position="0 -0.05 0" material="color: #AA5577; shader: standard" sq-collider></a-entity>
+      <a-entity gltf-model="#my-model" position="3 2 5" scale="1 1 1" material="color:brown; shader: standard"></a-entity>
     </a-scene>
   </body>
 
