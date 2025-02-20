@@ -24,9 +24,7 @@
         <a-image src="#crow-image" position="-7 2 -7" width="4" height="2.25"></a-image>
       </a-entity>
 
-      <a-entity id="floor_texture" visible="true">
-        <a-image src="#floor-01" position="0 .6 0" width="4" height="2.25" rotation="0 90 0"></a-image>
-      </a-entity>
+
 
 
       
@@ -35,13 +33,6 @@
 
       <!-- Lighting -->
       <a-light type="directional" color="#FFF" position="3 3 3" intensity="1" castShadow="true"></a-light>
-
-      <!-- Side Floor Box -->
-      <a-box position="-15 .5 -2" width="10" height=".3" depth="10" 
-             material="color: gray; shader: standard" 
-             shadow="cast: true; receive: true" 
-             sq-collider>
-      </a-box>
 
       <!-- Blue Box -->
       <a-box position="3 1 0" rotation="0 -100 0" 
@@ -64,7 +55,18 @@
                 shadow="cast: true; receive: true" 
                 sq-collider>
       </a-entity>
-
+      <!-- Ground Texture -->
+      <a-entity id="floor_texture" visible="true">
+        <a-image src="#floor-01" position="0 .6 0" width="4" height="2.25" rotation="0 0 90"></a-image>
+      </a-entity>
+      
+      <!-- Side Floor Box -->
+      <a-box position="-15 .5 -2" width="10" height=".3" depth="10" 
+             material="color: gray; shader: standard" 
+             shadow="cast: true; receive: true" 
+             sq-collider>
+      </a-box>
+      
       <!-- GLTF Model -->
       <a-entity gltf-model="#my-model" 
         position="0 2 4" 
@@ -87,14 +89,22 @@
       <a-link href="https://crystal-ice.bant.ing/"
         title="Crystal Ice"
         image="#monkeys-fight-lion-thumb" 
-        position="0 .5 -6"
+        position="2 .5 -8"
         rotation="0 0 0"
         scale="1 1 1"></a-link>
 
       
       <!-- Monkey Pic -->
-      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" position="8 2 -3" scale="3.2 1.8 .01"></a-image>
-      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" position="8 2 -3" scale="3.2 1.8 .01"></a-image>
+      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" 
+        position="8 2 -3" 
+        scale="3.2 1.8 .01">
+      </a-image>
+
+      <!-- Monkey Pic -->
+      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png"
+        position="8 10 -3" 
+        scale="3.2 1.8 .01">
+      </a-image>
 
     </a-scene>
   </body>
