@@ -12,21 +12,24 @@
     <a-scene stats>
       <!-- Assets  -->
       <a-assets>  
+        <a-asset-item id="bob-works" src="https://nathanconnell.github.io/Monkerton/Monkey/BobWORKS.glb">
         <a-asset-item id="my-spiker2" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiker2.gltf">
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
         <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
         <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
       </a-assets>
+
+      <!-- Hovering Text -->
       <a-entity position="0 6 -10" rotation="0 0 0">
         <a-text value="This space is a work in progress by" position="0 0 0" align="center" color="#4444DD" text=""></a-text> 
         <a-text value="THROWSWORDS" position="0 -0.3 0" align="center" color="#DDDD44" text=""></a-text> 
       </a-entity>
       
       <!-- GLTF Model -->
-      <a-entity gltf-model="#my-spiker2"
-        position="3 2 4"                   
-      </a-entity>
+<!--      <a-entity gltf-model="#my-spiker2"         -->
+<!--        position="3 2 4"                         -->
+<!--      </a-entity>                                -->
       
       <!-- Crow Image -->
       <a-entity id="picture-left" visible="true">
