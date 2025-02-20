@@ -11,9 +11,8 @@
   <body>
     <a-scene stats>
       <!-- Assets -->
-      <a-assets>
-        <a-asset-item id="tree" src="/path/to/tree.gltf"></a-asset-item>
-        <a-asset-item id="my-model" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiker1.gltf"></a-asset-item>
+      <a-assets>  
+        <a-asset-item id="my-spiker1" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiker1.gltf"></a-asset-item>
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
         <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
@@ -24,8 +23,14 @@
         <a-text value="THROWSWORDS" position="0 -0.3 0" align="center" color="#DDDD44" text=""></a-text> 
       </a-entity>
       
-      <a-entity gltf-model="#tree"></a-entity>
-
+      <!-- GLTF Model -->
+      <a-entity gltf-model="#my-spiker1" 
+        position="0 2 4" 
+        scale="1 1 1"
+        material="color: #AA00BB; shader: standard" 
+        shadow="cast: true; receive: true"
+        material="color: #2222CC">
+      </a-entity>
       
       <!-- Crow Image -->
       <a-entity id="picture-left" visible="true">
@@ -95,18 +100,6 @@
           rotation="-90 0 0">
         </a-image>
       </a-entity>
-      
-
-
-      <!-- GLTF Model -->
-      <a-entity gltf-model="#my-model" 
-        position="0 2 4" 
-        scale="1 1 1"
-        material="color: #AA00BB; shader: standard" 
-        shadow="cast: true; receive: true"
-        material="color: red">
-      </a-entity>
-
 
       <!-- Link/Portal (Title Does Nothing. Uses meta info in head.)-->
       <a-link href="https://nathanconnell.github.io/Monkerton/Fast.html"
