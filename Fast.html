@@ -15,13 +15,20 @@
         <a-asset-item id="my-model" src="https://nathanconnell.github.io/Monkerton/Monkey/Rock2.glb"></a-asset-item>
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
         <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
-        <img id="loading-thumbnail" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
+        <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
+        <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
       </a-assets>
 
       <!-- Loading Screen -->
-      <a-entity id="loading-screen" visible="true">
-        <a-image src="#loading-thumbnail" position="-7 2 -7" width="4" height="2.25"></a-image>
+      <a-entity id="picture-left" visible="true">
+        <a-image src="#crow-image" position="-7 2 -7" width="4" height="2.25"></a-image>
       </a-entity>
+
+      <a-entity id="floor_texture" visible="true">
+        <a-image src="#floor-01" position="0 .6 0" width="4" height="2.25" rotation="0 90 0"></a-image>
+      </a-entity>
+
+
       
       <!-- Skybox -->
       <a-sky src="#sky-texture"></a-sky>
@@ -31,7 +38,7 @@
 
       <!-- Side Floor Box -->
       <a-box position="-15 .5 -2" width="10" height=".3" depth="10" 
-             material="color: red; shader: standard" 
+             material="color: gray; shader: standard" 
              shadow="cast: true; receive: true" 
              sq-collider>
       </a-box>
@@ -68,24 +75,25 @@
       </a-entity>
 
 
-      <!-- Link/Portal -->
+      <!-- Link/Portal (Title Does Nothing. Uses meta info in head.)-->
       <a-link href="https://nathanconnell.github.io/Monkerton/Fast.html"
-        title="Angry Monkeys"
+        title="Monkeyville Deluxe"
         image="#monkeys-fight-lion-thumb"
         position="0 .5 -8"
         rotation="0 0 0"
         scale="2 2 2"></a-link>
 
-     <!-- Link/Portal -->
+     <!-- Link/Portal (Image does nothing. Uses meta link in head.)-->
       <a-link href="https://crystal-ice.bant.ing/"
         title="Crystal Ice"
-        image="#monkeys-fight-lion-thumb"
-        position="0 .5 6"
+        image="#monkeys-fight-lion-thumb" 
+        position="0 .5 -6"
         rotation="0 0 0"
         scale="1 1 1"></a-link>
 
       
       <!-- Monkey Pic -->
+      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" position="8 2 -3" scale="3.2 1.8 .01"></a-image>
       <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" position="8 2 -3" scale="3.2 1.8 .01"></a-image>
 
     </a-scene>
