@@ -70,12 +70,23 @@
       </a-entity>
       
       <!-- Side Floor Box -->
-      <a-box position="-15 .5 -2" width="10" height=".3" depth="10" 
+      <a-box position="-15 0 -3" width="10" height=".2" depth="10" 
              material="color: gray; shader: standard" 
              shadow="cast: true; receive: true" 
              sq-collider>
       </a-box>
+      <!-- Side floor Texture -->
+      <a-entity id="side-floor_texture" visible="true">
+        <a-image src="#floor-01" 
+          position="_15 .11 -3" 
+          width="15" 
+          height="15" 
+          rotation="-90 0 0">
+        </a-image>
+      </a-entity>
       
+
+
       <!-- GLTF Model -->
       <a-entity gltf-model="#my-model" 
         position="0 2 4" 
