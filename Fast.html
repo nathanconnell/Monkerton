@@ -12,7 +12,8 @@
     <a-scene stats>
       <!-- Assets -->
       <a-assets>
-        <a-asset-item id="my-model" src="https://nathanconnell.github.io/Monkerton/Monkey/Rock2.glb"></a-asset-item>
+        <a-asset-item id="tree" src="/path/to/tree.gltf"></a-asset-item>
+        <a-asset-item id="my-model" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiker1.gltf"></a-asset-item>
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
         <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
@@ -22,6 +23,9 @@
         <a-text value="This space is a work in progress by" position="0 0 0" align="center" color="#4444DD" text=""></a-text> 
         <a-text value="THROWSWORDS" position="0 -0.3 0" align="center" color="#DDDD44" text=""></a-text> 
       </a-entity>
+      
+      <a-entity gltf-model="#tree"></a-entity>
+
       
       <!-- Crow Image -->
       <a-entity id="picture-left" visible="true">
