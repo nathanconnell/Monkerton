@@ -13,13 +13,10 @@
  
       <!-- Assets  -->
       <a-assets>  
-        <!-- <a-asset-item id="bob-works" src="https://nathanconnell.github.io/Monkerton/Monkey/BobWORKS.glb"> -->
-        <!-- <a-asset-item id="bob-works2" src="https://nathanconnell.github.io/Monkerton/Monkey/BobWORKS2.glb"> -->
         <a-asset-item id="my-elephant" src="https://cdn.sidequestvr.com/file/1908478/model.glb">
         <a-asset-item id="my-evil-duck" src="https://cdn.sidequestvr.com/file/1828274/model.glb">
         <a-asset-item id="my-spiker3" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiker3.glb">
         <a-asset-item id="odd-brickwall1" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1.glb">
-        <!-- <a-asset-item id="odd-brickwall1-new" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1_new.glb"> -->
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
         <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
@@ -33,17 +30,13 @@
       </a-entity>
 
       <!-- GLTF Model -->
-      <!-- <a-entity gltf-model="#bob-works" position="-3 0 -8"> </a-entity> -->
-      <!-- <a-entity gltf-model="#bob-works2" position="-2 0 -8"> </a-entity> -->
-          
-      <!-- GLTF Model -->
       <a-entity gltf-model="#my-spiker3"         
         position="3 0 4">                         
       </a-entity>         
           
       <!-- GLTF Model -->
       <a-entity gltf-model="#my-elephant"         
-        position="-15 1.4 -2" scale="4 4 4">                         
+        position="-15 1.8 -2" scale="4 4 4">                         
       </a-entity>         
 
       <!-- GLTF Model -->
@@ -102,7 +95,7 @@
       </a-sphere>
 
       <!-- Ground -->
-      <a-entity geometry="primitive: box; width: 30; height: .1; depth: 30" 
+      <a-entity geometry="primitive: box; width: 30; height: .2; depth: 30" 
                 position="0 -0.1 0" 
                 material="color: #445577; shader: standard" 
                 shadow="cast: true; receive: true" 
@@ -110,7 +103,7 @@
       </a-entity>
       <!-- Ground Texture -->
       <a-entity id="floor_texture" visible="true">
-        <a-image src="#floor-01" position="0 .11 0" width="10" height="10" rotation="-90 0 0"></a-image>
+        <a-image src="#floor-01" position="0 .11 0" width="5" height="5" rotation="-90 0 0"></a-image>
       </a-entity>
           
 
