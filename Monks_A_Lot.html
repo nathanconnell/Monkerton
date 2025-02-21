@@ -18,13 +18,25 @@
         <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
         <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
+        <a-asset-item id="my-elephant" src="https://cdn.sidequestvr.com/file/1908478/model.glb">
       </a-assets>
       
       <!-- Skybox -->
       <a-sky src="#sky-texture"></a-sky>
 
+      <!-- Hovering Text -->
+      <a-entity position="0 6 -10" rotation="0 0 0">
+        <a-text value="This space is a work in progress by" position="0 0 0" align="center" color="#4444DD"></a-text> 
+        <a-text value="THROWSWORDS" position="0 -0.3 0" align="center" color="#DDDD44"></a-text> 
+      </a-entity>
+      
+      <!-- GLTF Model -->
+      <a-entity gltf-model="#my-elephant"         
+        position="-15 1.8 -2" scale="4 4 4">                         
+      </a-entity>         
+      
       <!-- Blue Box -->
-      <a-box position="3 1 0" rotation="0 0 0" width="1" height="1" depth="1"
+      <a-box position="3 1 0" rotation="0 0 0" depth="1" height="1" width="1"
              material="color: #4CC3D9"
              sq-collider>
       </a-box>
