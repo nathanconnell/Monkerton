@@ -9,8 +9,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
   </head>
   <body>
-    <a-scene > <!-- </a-scene>obb-collider="showColliders: true" stats="true"> -->
- 
+    <a-scene >
       <!-- Assets  -->
       <a-assets>  
         <!-- <a-asset-item id="bob-works" src="https://nathanconnell.github.io/Monkerton/Monkey/BobWORKS.glb"> -->
@@ -18,10 +17,10 @@
         <a-asset-item id="my-elephant" src="https://cdn.sidequestvr.com/file/1908478/model.glb">
         <a-asset-item id="my-evil-duck" src="https://cdn.sidequestvr.com/file/1828274/model.glb">
         <a-asset-item id="my-spiker3" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiker3.glb">
-        <a-asset-item id="odd-brickwall1" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1.glb">
+        <!-- <a-asset-item id="odd-brickwall1" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1.glb"> -->
         <!-- <a-asset-item id="odd-brickwall1-new" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1_new.glb"> -->
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
-        <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
+        <!-- <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png"> -->
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
         <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
       </a-assets>
@@ -43,12 +42,12 @@
           
       <!-- GLTF Model -->
       <a-entity gltf-model="#my-elephant"         
-        position="-15 1.4 -2" scale="4 4 4">                         
+        position="-15 2.4 -2" scale="4 4 4">                         
       </a-entity>         
 
       <!-- GLTF Model -->
       <a-entity gltf-model="#my-evil-duck"         
-        position="-5 .85 5" scale="2 2 2" rotation="0 -45 0"                   
+        position="-5 1.35 5" scale="2 2 2" rotation="0 -45 0"                   
       </a-entity>         
       
       <!-- GLTF Models - Odd_Brickwall_1 -->
@@ -56,24 +55,15 @@
         position="8 0 -2"
         rotation="0 -90 0"> 
       </a-entity>
-      <!-- GLTF Models - Odd_Brickwall_1 -->
-      <a-entity gltf-model="#odd-brickwall1"
-        position="8 0 0"
-        rotation="0 -90 0"> 
-      </a-entity>
-      <!-- GLTF Models - Odd_Brickwall_1 -->
-<!--      <a-entity gltf-model="#odd-brickwall1-new"
-        position="8 0 2"
-        rotation="0 -90 0"> 
-      </a-entity> -->
 
-          
+      <!-- Monkey Pic -->
+      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" 
+        position="8 2 -9" scale="3.2 1.8 .01">
+      </a-image>
       <!-- Crow Image -->
       <a-entity id="picture-left" visible="true">
         <a-image src="#crow-image" 
-          position="-7 2 -7" 
-          width="4" 
-          height="2.25"> 
+          position="-7 2 -7" width="4" height="2.25"> 
         </a-image>
       </a-entity>
       
@@ -83,8 +73,7 @@
       <!-- Lighting -->
       <a-light type="directional" color="#FFF" 
         position="3 3 3" 
-        intensity="1" 
-        castShadow="true"> 
+        intensity="1">
       </a-light>
 
       <!-- Blue Box -->
@@ -141,12 +130,6 @@
         position="3 .7 9"
         rotation="0 0 0"
         scale="1 1 1"></a-link>
-
-      <!-- Monkey Pic -->
-      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" 
-        position="8 2 -9" 
-        scale="3.2 1.8 .01">
-      </a-image>
 
     </a-scene>
   </body>
