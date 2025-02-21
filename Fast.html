@@ -9,7 +9,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
   </head>
   <body>
-    <a-scene > <!-- </a-scene>obb-collider="showColliders: true" stats="true"> -->
+    <a-scene >
  
       <!-- Assets  -->
       <a-assets>  
@@ -54,12 +54,6 @@
         position="8 0 0"
         rotation="0 -90 0"> 
       </a-entity>
-      <!-- GLTF Models - Odd_Brickwall_1 -->
-<!--      <a-entity gltf-model="#odd-brickwall1-new"
-        position="8 0 2"
-        rotation="0 -90 0"> 
-      </a-entity> -->
-
           
       <!-- Crow Image -->
       <a-entity id="picture-left" visible="true">
@@ -73,24 +67,15 @@
       <!-- Skybox -->
       <a-sky src="#sky-texture"></a-sky>
 
-      <!-- Lighting -->
-      <a-light type="directional" color="#FFF" 
-        position="3 3 3" 
-        intensity="1" 
-        castShadow="true"> 
-      </a-light>
-
       <!-- Blue Box -->
       <a-box position="3 1 0" rotation="0 -100 0" 
-             material="color: #4CC3D9; shader: standard" 
-             shadow="cast: true; receive: true" 
+             material="color: #4CC3D9; shader: standard"
              sq-collider>
       </a-box>
 
       <!-- Sphere -->
       <a-sphere position="8 1.25 -5" radius="1.25" 
                 material="color: #BB2D5E" 
-                shadow="cast: true; receive: true" 
                 dynamic-body>
       </a-sphere>
 
@@ -103,13 +88,12 @@
       </a-entity>
       <!-- Ground Texture -->
       <a-entity id="floor_texture" visible="true">
-        <a-image src="#floor-01" position="0 .11 0" width="5" height="5" rotation="-90 0 0"></a-image>
+        <a-image src="#floor-01" position="0 .02 0" width="5" height="5" rotation="-90 0 0"></a-image>
       </a-entity>
           
 
       <!-- Link/Portal -->
       <a-link href="https://nathanconnell.github.io/Monkerton/Fast.html"
-        title="Monkeyville Deluxe"
         position="0 .5 -8"
         rotation="0 0 0"
         scale="2 2 2">        
