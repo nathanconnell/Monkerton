@@ -101,52 +101,17 @@
       </a-sphere>
 
       <!-- Ground -->
-      <a-entity geometry="primitive: box; width: 20; height: .1; depth: 20" 
-                position="0 -0.05 0" 
+      <a-entity geometry="primitive: box; width: 100; height: .1; depth: 100" 
+                position="-0 -0.05 0" 
                 material="color: #445577; shader: standard" 
                 shadow="cast: true; receive: true" 
                 sq-collider>
       </a-entity>
       <!-- Ground Texture -->
       <a-entity id="floor_texture" visible="true">
-        <a-image src="#floor-01" 
-          position="0 .01 0" 
-          width="20" 
-          height="20" 
-          rotation="-90 0 0">
-        </a-image>
-      </a-entity>
-      <!-- Ground_2 -->
-      <a-entity geometry="primitive: box; width: 20; height: .1; depth: 20" 
-                position="20 -0.05 0" 
-                material="color: #445577; shader: standard" 
-                shadow="cast: true; receive: true" 
-                sq-collider>
-      </a-entity>
-      <!-- Ground Texture -->
-      <a-entity id="floor_texture" visible="true">
-        <a-image src="#floor-01" 
-          position="20 .01 0" 
-          width="20" 
-          height="20" 
-          rotation="-90 0 0">
-        </a-image>
-      </a-entity>
-      <!-- Ground_3 -->
-      <a-entity geometry="primitive: box; width: 20; height: .1; depth: 20" 
-                position="40 -0.05 0" 
-                material="color: #445577; shader: standard" 
-                shadow="cast: true; receive: true" 
-                sq-collider>
-      </a-entity>
-      <!-- Ground Texture -->
-      <a-entity id="floor_texture" visible="true">
-        <a-image src="#floor-01" 
-          position="40 .01 0" 
-          width="20" 
-          height="20" 
-          rotation="-90 0 0">
-        </a-image>
+        <a-image src="#floor-01" position="0 .01 0" width="10" height="10" rotation="-90 0 0"></a-image>
+        <a-image src="#floor-01" position="0 .01 0" width="20" height="20" rotation="-90 0 0"></a-image>
+
       </a-entity>
           
       <!-- Side Floor Box -->
