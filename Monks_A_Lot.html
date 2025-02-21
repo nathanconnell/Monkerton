@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta property="og:title" content="Monks-A-Lot">
+    <meta property="og:description" content="There are monkeys here.">
+    <meta property="og:image" content="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion2.png">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@latest/dist/aframe-physics-system.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene >
+ 
+      <!-- Assets  -->
+      <a-assets>  
+        <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
+        <img id="monkeys-fight-lion-thumb" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">
+        <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
+        <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
+      </a-assets>
+
+      <!-- GLTF Models - Odd_Brickwall_1 -->
+      <a-entity gltf-model="#odd-brickwall1"
+        position="8 0 -2"
+        rotation="0 -90 0"> 
+      </a-entity>
+      <!-- GLTF Models - Odd_Brickwall_1 -->
+      <a-entity gltf-model="#odd-brickwall1"
+        position="8 0 0"
+        rotation="0 -90 0"> 
+      </a-entity>
+          
+      <!-- Crow Image -->
+      <a-entity id="picture-left" visible="true">
+        <a-image src="#crow-image" 
+          position="-7 2 -7" 
+          width="4" 
+          height="2.25"> 
+        </a-image>
+      </a-entity>
+      
+      <!-- Skybox -->
+      <a-sky src="#sky-texture"></a-sky>
+
+      <!-- Blue Box -->
+      <a-box position="3 1 0" rotation="0 0 0" width="1" height="1" depth="1"
+             material="color: #4CC3D9"
+             sq-collider>
+      </a-box>
+
+      <!-- Sphere -->
+      <a-sphere position="8 1.25 -5" radius="1.25" 
+                material="color: #BB2D5E">
+      </a-sphere>
+
+      <!-- Ground -->
+      <a-entity geometry="primitive: box; width: 30; height: .2; depth: 30" 
+                position="0 -0.1 0" 
+                material="color: #445577" 
+                sq-collider>
+      </a-entity>
+      <!-- Ground Texture -->
+      <a-entity id="floor_texture" visible="true">
+        <a-image src="#floor-01" position="0 .02 0" width="5" height="5" rotation="-90 0 0"></a-image>
+      </a-entity>
+          
+
+      <!-- Link/Portal -->
+      <a-link href="https://nathanconnell.github.io/Monkerton/Monks_A_Lot.html"
+        position="0 .5 -8"
+        rotation="0 0 0"
+        scale="2 2 2">        
+      </a-link>
+
+     <!-- Link/Portal -->
+      <a-link href="https://rooms.bant.ing/"
+        title="Crystal Ice"
+        position="-3 .7 -8"
+        rotation="0 0 0"
+        scale="1 1 1">
+      </a-link>
+
+     <!-- Link/Portal -->
+      <a-link href="https://crystal-ice.bant.ing/"
+        position="3 .7 -8"
+        rotation="0 0 0"
+        scale="1 1 1"></a-link>
+
+      <!-- Link/Portal -->
+      <a-link href="https://wb.bant.ing/"
+        position="3 .7 9"
+        rotation="0 0 0"
+        scale="1 1 1"></a-link>
+
+      <!-- Monkey Pic -->
+      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" 
+        position="8 2 -9" 
+        scale="3.2 1.8 .01">
+      </a-image>
+    </a-scene>
+  </body>
+</html>
