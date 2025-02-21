@@ -104,7 +104,7 @@
 
       <!-- Ground -->
       <a-entity geometry="primitive: box; width: 110; height: .1; depth: 110" 
-                position="-0 -0.05 0" 
+                position="0 -0.05 0" 
                 material="color: #445577; shader: standard" 
                 shadow="cast: true; receive: true" 
                 sq-collider>
@@ -133,28 +133,8 @@
         <a-image src="#floor-01" position="-30 .01 10" width="10" height="10" rotation="-90 0 0"></a-image>
         <a-image src="#floor-01" position="-40 .01 10" width="10" height="10" rotation="-90 0 0"></a-image>
         <a-image src="#floor-01" position="-50 .01 10" width="10" height="10" rotation="-90 0 0"></a-image>
-
-
       </a-entity>
           
-      <!-- Side Floor Box -->
-      <a-box position="-15 0 -3" 
-             width="10" 
-             height=".2" 
-             depth="10" 
-             material="color: gray; shader: standard" 
-             shadow="cast: true; receive: true" 
-             sq-collider>
-      </a-box>
-      <!-- Side floor Texture -->
-      <a-entity id="side-floor_texture" visible="true">
-        <a-image src="#floor-01" 
-          position="-15 .11 -3" 
-          width="10" 
-          height="10" 
-          rotation="-90 0 0">
-        </a-image>
-      </a-entity>
 
       <!-- Link/Portal (Title Does Nothing. Uses meta info in head.)-->
       <a-link href="https://nathanconnell.github.io/Monkerton/Fast.html"
@@ -197,11 +177,6 @@
         scale="3.2 1.8 .01">
       </a-image>
 
-      <!-- Monkey Pic -->
-      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png"
-        position="8 -10 -3" 
-        scale="3.2 1.8 .01">
-      </a-image>
 
     </a-scene>
   </body>
