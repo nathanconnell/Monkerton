@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta property="og:title" content="Monks-A-Lot">
+    <meta property="og:description" content="There are monkeys here.">
+    <meta property="og:image" content="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion2.png">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@latest/dist/aframe-physics-system.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene >
+ 
+      <!-- Assets  -->
+      <a-assets>  
+        <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Sky.png">
+        <img id="monkeys-fight-lion" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png">            
+        <img id="monkeys-fight-lion3" src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion3.png">
+        <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
+        <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
+        <a-asset-item id="my-elephant" src="https://cdn.sidequestvr.com/file/1908478/model.glb"></a-asset-item>
+        <a-asset-item id="odd-brickwall-1" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1.glb"></a-asset-item>
+        <a-asset-item id="woodwork-1" src="https://nathanconnell.github.io/Monkerton/Monkey/Woodwork_01.glb"></a-asset-item>
+        <a-asset-item id="test-ball-1" src="https://nathanconnell.github.io/Monkerton/Monkey/Test_Ball_01.glb"></a-asset-item>
+      </a-assets>
+      
+      <!-- Skybox -->
+      <a-sky src="#sky-texture"></a-sky>
+
+      <!-- --------------Hovering Text--------------- -->
+      <!-- CREDIT to THROWSWORDS -->
+      <a-entity position="0 6 -10" rotation="0 0 0">
+        <a-text value="This space is a work in progress by" position="0 0 0" align="center" color="#4444DD"></a-text> 
+        <a-text value="THROWSWORDS" position="0 -0.3 0" align="center" color="#DDDD44"></a-text> 
+      </a-entity>
+      <!-- Rules for: TAIL to TRUNK -->
+      <a-entity position="35.8 2 -30" rotation="0 90 0" scale=".15 .15 .15">
+        <a-text value="TAIL to TRUNK" position="2.5 0 .2" align="center" color="#DDDD44" scale="2 2 2"></a-text> 
+        <a-text value="TAIL to TRUNK" position="2.5 0 .17" align="center" color="#229999" scale="2 2 2"></a-text> 
+        <a-text value="How to play:" position="0 -.35 .1" align="left" color="#DDDD44"></a-text> 
+        <a-text value="1. Walk into the back side of the elephant so that" position="0 -.6 0" align="left" color="#44DDDD"></a-text> 
+        <a-text value="you can no longer see the outside world." position=".3 -.85 0" align="left" color="#44DDDD"></a-text> 
+        <a-text value="2. Jump forward and land with your head inside the trunk" position="0 -1.1 0" align="left" color="#44DDDD"></a-text> 
+        <a-text value="WITHOUT seeing anything outside the elephant." position=".3 -1.35 0" align="left" color="#44DDDD"></a-text> 
+        <a-text value="3. If you get a glimpse of the outside world, go again." position="0 -1.6 0" align="left" color="#44DDDD"></a-text> 
+        <a-text value="Ways to LOSE:" position="0 -1.95 .1" align="left" color="#DDDD44"></a-text>
+        <a-text value="1. If you fall backwards off the platform." position="0 -2.2 0" align="left" color="#44DDDD"></a-text>     
+        <a-text value="2. If someone catches you playing TAIL to TRUNK." position="0 -2.45 0" align="left" color="#44DDDD"></a-text>     
+        <a-text value="Ways to WIN:" position="0 -2.8 .1" align="left" color="#DDDD44"></a-text>     
+        <a-text value="1. Land with your head INSIDE the trunk WITHOUT seeing the outside world." position="0 -3.05 0" align="left" color="#44DDDD"></a-text>     
+        <a-text value="2. Re-evaluate your life choices." position="0 -3.30 0" align="left" color="#44DDDD"></a-text>     
+      </a-entity>
+      
+      <!-- -------------GLTF Models----------------- -->
+      <a-entity gltf-model="#my-elephant"         
+        position="35 1.6 -30" scale="4 4 4" rotation="0 0 0">                         
+      </a-entity>    
+      <a-entity gltf-model="#odd-brickwall-1"         
+        position="15.1 0 0" scale="1 1 1" rotation="0 90 0">                         
+      </a-entity>
+      <a-entity gltf-model="#odd-brickwall-1"         
+        position="14.9 0 0" scale="1 1 1" rotation="0 -90 0">                         
+      </a-entity>
+      <a-entity gltf-model="#odd-brickwall-1"         
+        position="15.1 0 2" scale="1 1 1" rotation="0 90 0">                         
+      </a-entity>
+      <a-entity gltf-model="#odd-brickwall-1"         
+        position="14.9 0 2" scale="1 1 1" rotation="0 -90 0">                         
+      </a-entity>
+      <a-entity gltf-model="#woodwork-1"         
+        position="14.9 .3 4" scale="1 1 1" rotation="0 -90 0">                         
+      </a-entity>
+      <a-entity gltf-model="#test-ball-1"         
+        position="0 1 -4" scale="1 1 1" rotation="0 0 0">                         
+      </a-entity>
+      
+      <!-- Blue Box -->
+      <a-box position="3 1 0" rotation="0 0 0" depth="1" height="1" width="1"
+             material="color: #4CC3D9"
+             sq-collider>
+      </a-box>
+
+      <!-- Sphere -->
+      <a-sphere position="8 1.25 -5" radius="1.25" 
+                material="color: #BB2D5E">
+      </a-sphere>
+
+      <!-- ------------Ground--------------- -->
+      <a-entity geometry="primitive: box; width: 80; height: .2; depth: 80" 
+                position="0 -0.1 0" 
+                material="color: #445577" 
+                sq-collider>
+      </a-entity>
+      <!-- Ground Texture -->
+      <a-entity id="floor_texture" visible="true">
+        <a-image src="#floor-01" position="0 .02 0" width="5" height="5" rotation="-90 0 0"></a-image>
+      </a-entity>
+      <a-entity geometry="primitive: plane; width: 5; height: 5"
+        position="10 0.03 10"
+        material="src: #floor-01; repeat: 5 5"
+        rotation="-90 0 0"> 
+      </a-entity>
+
+      <!-- ------------Links/Portals------------- -->   
+
+      <!-- SELF -->
+      <a-link href="https://nathanconnell.github.io/Monkerton/Monks_A_Lot_2.html"
+        title="Monks-A-Lot-2"
+        position="0 .5 -8"
+        rotation="0 0 0"
+        scale="2 2 2">        
+      </a-link>
+      <!-- Backrooms -->
+      <a-link href="https://rooms.bant.ing/"
+        title="Backrooms"
+        position="-3 .7 -8"
+        rotation="0 0 0"
+        scale="1 1 1"></a-link>
+      <!-- A Crystal Lake -->
+      <a-link href="https://crystal-ice.bant.ing/"
+        title="Crystal Ice"
+        position="3 .7 -8"
+        rotation="0 0 0"
+        scale="1 1 1"></a-link>
+      <!-- AI World Builder -->
+      <a-link href="https://wb.bant.ing/"
+        title="AI World Builder"
+        position="3 .7 9"
+        rotation="0 0 0"
+        scale="1 1 1"></a-link>
+
+      <!-- Monkey Pic -->
+      <a-image src="https://nathanconnell.github.io/Monkerton/Monkey/Monkeys_Fight_Lion.png" 
+        position="8 2 -9" 
+        scale="3.2 1.8 .01"></a-image>
+      <a-image src="#monkeys-fight-lion3" 
+        position="8 2 -9.1"
+        scale="3.2 1.8 .01"
+        rotation="0 180 0"></a-image>
+      <a-image src="#crow-image" 
+        position="-8 2 -9"
+        scale="3.2 1.8 .01"
+        rotation="0 0 0"></a-image>
+    </a-scene>
+  </body>
+</html>
