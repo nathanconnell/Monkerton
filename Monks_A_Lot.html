@@ -7,10 +7,15 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-physics-system@latest/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script> <!-- ADDED THIS -->
 
   </head>
   <body>
     <a-scene >
+      <!-- -----------------------ADDED THIS--------------- -->
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+                event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
+                event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false"></a-cylinder>
  
       <!-- Assets  -->
       <a-assets>  
@@ -20,6 +25,12 @@
         <img id="crow-image" src="https://nathanconnell.github.io/Monkerton/Monkey/Crow_Yarn_Squirrel.png">
         <img id="floor-01" src="https://nathanconnell.github.io/Monkerton/Monkey/Spiral_Walkways_01.png">
         <a-asset-item id="my-elephant" src="https://cdn.sidequestvr.com/file/1908478/model.glb"></a-asset-item>
+
+        <a-asset-item id="my-lilypad-tree-1" src="https://cdn.sidequestvr.com/file/1915419/model.glb"></a-asset-item>
+        <a-asset-item id="my-lilypad-tree-2" src="https://cdn.sidequestvr.com/file/1915527/model.glb"></a-asset-item>
+        <a-asset-item id="my-lilypad-tree-3" src="https://cdn.sidequestvr.com/file/1915518/model.glb"></a-asset-item>
+<!--        <a-asset-item id="my-lilypad-tree-4" src="https://cdn.sidequestvr.com/file/1915535/model.glb"></a-asset-item>  -->
+
         <a-asset-item id="odd-brickwall-1" src="https://nathanconnell.github.io/Monkerton/Monkey/Odd_Brickwall_1.glb"></a-asset-item>
         <a-asset-item id="woodwork-1" src="https://nathanconnell.github.io/Monkerton/Monkey/Woodwork_01.glb"></a-asset-item>
         <a-asset-item id="test-ball-1" src="https://nathanconnell.github.io/Monkerton/Monkey/Test_Ball_01.glb"></a-asset-item>
@@ -55,7 +66,24 @@
       <!-- -------------GLTF Models----------------- -->
       <a-entity gltf-model="#my-elephant"         
         position="35 1.6 -30" scale="4 4 4" rotation="0 0 0">                         
-      </a-entity>    
+      </a-entity>
+      
+      <a-entity gltf-model="#my-lilypad-tree-1"         
+        position="30 4 -20" scale="10 10 10" rotation="0 65 0">                         
+      </a-entity>
+      <a-entity gltf-model="#my-lilypad-tree-2"         
+        position="27 4 -15" scale="10 10 10" rotation="0 0 0">                         
+      </a-entity>
+<!--      <a-entity gltf-model="#my-lilypad-tree-3"         
+        position="23 1.6 -27" scale="8 8 8" rotation="0 0 0">                         
+      </a-entity> -->
+<!--      <a-entity gltf-model="#my-lilypad-tree-4"         
+        position="32 2.5 -10" scale="10 10 10" rotation="0 0 0">                         
+      </a-entity> -->
+      <a-entity gltf-model="#my-lilypad-tree-3"         
+        position="24 4 -30" scale="10 10 10" rotation="0 0 0">
+      </a-entity> 
+      
       <a-entity gltf-model="#odd-brickwall-1"         
         position="15.1 0 0" scale="1 1 1" rotation="0 90 0">                         
       </a-entity>
@@ -69,7 +97,10 @@
         position="14.9 0 2" scale="1 1 1" rotation="0 -90 0">                         
       </a-entity>
       <a-entity gltf-model="#woodwork-1"         
-        position="14.9 .3 4" scale="1 1 1" rotation="0 -90 0">                         
+        position="15 0 5" scale="1 1 1" rotation="0 90 0">                         
+      </a-entity>
+      <a-entity gltf-model="#woodwork-1"         
+        position="15 0 5" scale="1 1 1" rotation="0 -90 0">                         
       </a-entity>
       <a-entity gltf-model="#test-ball-1"         
         position="0 1 -4" scale="1 1 1" rotation="0 0 0">                         
@@ -106,7 +137,7 @@
 
       <!-- SELF -->
       <a-link href="https://nathanconnell.github.io/Monkerton/Monks_A_Lot.html"
-        title="Monks-A-Lot"
+        title="Monks-A-Lot-2"
         position="0 .5 -8"
         rotation="0 0 0"
         scale="2 2 2">        
