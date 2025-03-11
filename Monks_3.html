@@ -12,19 +12,27 @@
   </head>
   <body>
     <a-scene>
+      <a-assets>
+        <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Skymap_AI1.png">
+      
+      </a-assets>
+
+
+      <!-- Skybox -->
+      <a-sky src="#sky-texture"></a-sky>
       
       <!-- -----GROUND----- -->
       <a-entity geometry="primitive: box; width: 80; height: .2; depth: 80" 
                 position="0 -0.1 0" 
-                material="color: #773322" 
+                material="color: #228822" 
                 sq-collider>
       </a-entity>
 
       <!-- ------------Links/Portals------------- -->   
       <!-- SELF -->
-      <a-link href="https://nathanconnell.github.io/Monkerton/Monks_A_Lot_2.html"
-        title="Monks-A-Lot-2"
-        position="0 .5 -8"
+      <a-link href="https://nathanconnell.github.io/Monkerton/Monks_3html"
+        title="Monks_3"
+        position="0 .5 -10"
         rotation="0 0 0"
         scale="2 2 2">
       </a-link>
