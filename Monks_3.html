@@ -14,7 +14,7 @@
     <a-scene>
       <a-assets>
         <img id="sky-texture" src="https://nathanconnell.github.io/Monkerton/Monkey/Skymap_AI1.png">
-      
+        <a-asset-item id="many-plants" src="https://nathanconnell.github.io/Monkerton/Monkey/Many_Plants.glb"></a-asset-item>
       </a-assets>
 
 
@@ -26,6 +26,10 @@
                 position="0 -0.1 0" 
                 material="color: #228822" 
                 sq-collider>
+      </a-entity>
+      <!-- Many Plants model -->
+      <a-entity gltf-model="#many-plants"         
+        position="0 0 0" scale="1 1 1" rotation="0 0 0">                         
       </a-entity>
 
       <!-- ------------Links/Portals------------- -->   
