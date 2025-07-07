@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Meta Quest 3 Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Camera with cursor for click interaction -->
+      <a-entity id="camera" camera look-controls>
+        <a-entity 
+          cursor="fuse: false; rayOrigin: mouse" 
+          raycaster="objects: .clickable"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: black; shader: flat">
+        </a-entity>
+      </a-entity>
+
+      <!-- Clickable box -->
+      <a-box class="clickable"
+             position="0 1.5 -3"
+             rotation="0 45 0"
+             color="#FF4136"
+             event-set__enter="_event: mouseenter; color: #0074D9"
+             event-set__leave="_event: mouseleave; color: #FF4136">
+      </a-box>
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+
+    <script>
+      const box = document.querySelector('.clickable');
+      box.addEventListener('click', () => {
+        console.log('🎯 Box clicked!');
+        box.setAttribute('color', '#2ECC40'); // Turn green on click
+        setTimeout(() => box.setAttribute('color', '#FF4136'), 1000);
+      });
+    </script>
+  </body>
+</html>
