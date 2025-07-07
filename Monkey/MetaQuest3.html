@@ -2,42 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Meta Quest 3 Test</title>
+    <title>Meta Quest 3 Hand + Controller Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/super-hands@4.0.1/dist/super-hands.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <!-- Camera with cursor for click interaction -->
-      <a-entity id="camera" camera look-controls>
-        <a-entity 
-          cursor="fuse: false; rayOrigin: mouse" 
-          raycaster="objects: .clickable"
-          position="0 0 -1"
-          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-          material="color: black; shader: flat">
-        </a-entity>
+    <a-scene
+      xr-mode-ui="enabled: true"
+      renderer="antialias: true"
+      background="color: #ECECEC"
+      embedded
+    >
+      <!-- Camera -->
+      <a-entity id="cameraRig" position="0 1.6 0">
+        <a-camera wasd-controls look-controls></a-camera>
       </a-entity>
 
-      <!-- Clickable box -->
-      <a-box class="clickable"
-             position="0 1.5 -3"
-             rotation="0 45 0"
+      <!-- Left Hand or Controller -->
+      <a-entity
+        id="left-hand"
+        hand-tracking-controls="hand: left"
+        oculus-touch-controls="hand: left"
+        super-hands
+        visible="true">
+      </a-entity>
+
+      <!-- Right Hand or Controller -->
+      <a-entity
+        id="right-hand"
+        hand-tracking-controls="hand: right"
+        oculus-touch-controls="hand: right"
+        super-hands
+        visible="true">
+      </a-entity>
+
+      <!-- Interactable Box -->
+      <a-box id="target-box"
+             position="0 1.3 -1.5"
              color="#FF4136"
-             event-set__enter="_event: mouseenter; color: #0074D9"
-             event-set__leave="_event: mouseleave; color: #FF4136">
+             class="interactable grabbable"
+             event-set__hover="_event: hover-start; color: #2ECC40"
+             event-set__leave="_event: hover-end; color: #FF4136"
+             depth="0.4" height="0.4" width="0.4">
       </a-box>
+
+      <!-- Ground and Sky -->
       <a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
-
-    <script>
-      const box = document.querySelector('.clickable');
-      box.addEventListener('click', () => {
-        console.log('🎯 Box clicked!');
-        box.setAttribute('color', '#2ECC40'); // Turn green on click
-        setTimeout(() => box.setAttribute('color', '#FF4136'), 1000);
-      });
-    </script>
   </body>
 </html>
